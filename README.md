@@ -1,5 +1,5 @@
 # WisejDataGridView
-Demo application showing a Wisej project with a DataGridView. Uses Dapper and SQLite
+Demo application showing a Wisej project with a DataGridView.
 
 Data is stored in SQLite, and can be viewed via table in the Wisej application.
 Users can add organizations to the table via the GUI, with a name, street, zip, city and country.
