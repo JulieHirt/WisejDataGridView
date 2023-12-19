@@ -1,5 +1,6 @@
 # WisejDataGridView
-Demo application showing a Wisej project with a DataGridView.
+Demo application showing a Wisej project with a DataGridView. Based on https://github.com/JulieHirt/WisejJulieBodettev3
+Functionality to double-click on an entry to edit it is unfinished.
 
 Data is stored in SQLite, and can be viewed via table in the Wisej application.
 Users can add organizations to the table via the GUI, with a name, street, zip, city and country.
