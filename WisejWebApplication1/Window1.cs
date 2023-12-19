@@ -54,7 +54,6 @@ namespace WisejWebApplication1
                 //this converts the text in the Zip box to an integer
                 zipcode = int.Parse(typedTextBox3.Text);
                 OrganizationList.Add(new Organization() { Name = typedTextBox1.Text, Street = typedTextBox2.Text, Zip = zipcode, City = typedTextBox4.Text, Country = typedTextBox5.Text });
-                AlertBox.Show("You added an organization to the database");
 
                 //write the data to a sql database
 
@@ -78,11 +77,9 @@ namespace WisejWebApplication1
 
                 //close the connection to the database
                 databaseObject.CloseConnection();
-
-
-
-            }
-            catch(System.FormatException) //show alert if zip code is invalid
+				AlertBox.Show("You added an organization to the database");
+			}
+            catch (System.FormatException) //show alert if zip code is invalid
             {
                 AlertBox.Show("Please enter a number for the zip code");
             }
@@ -91,10 +88,11 @@ namespace WisejWebApplication1
                 AlertBox.Show("An error ocurred and your organization was not added to the database");
 
             }
-            
-        }
+			
 
-		private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+		}
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
 		{
             AlertBox.Show("double click");
             AlertBox.Show(e.RowIndex.ToString());
