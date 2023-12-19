@@ -97,8 +97,11 @@ namespace WisejWebApplication1
             AlertBox.Show("double click");
             AlertBox.Show(e.RowIndex.ToString());
 
-            ModalPopup modal = new ModalPopup(e.RowIndex);
-            modal.Show();
+            using (var modal = new ModalPopup(e.RowIndex))
+            {
+                modal.ShowDialog();
+                AlertBox.Show("here is some of the data you entered: " + modal.CompanyName1 + modal.Street + modal.City);
+            }
 		}
 	}
 }
