@@ -93,5 +93,14 @@ namespace WisejWebApplication1
             }
             
         }
-    }
+
+		private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+		{
+            AlertBox.Show("double click");
+            AlertBox.Show(e.RowIndex.ToString());
+
+            ModalPopup modal = new ModalPopup(e.RowIndex);
+            modal.Show();
+		}
+	}
 }
