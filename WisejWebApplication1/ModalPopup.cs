@@ -8,7 +8,7 @@ namespace WisejWebApplication1
 		public ModalPopup(int rowIndex)
 		{
 			InitializeComponent();
-			AlertBox.Show(rowIndex.ToString());
+			label1.Text = "You are editing row: " + rowIndex.ToString();
 		}
 	}
 }
