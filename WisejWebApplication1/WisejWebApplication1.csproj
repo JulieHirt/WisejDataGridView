@@ -31,7 +31,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Themes\" />
+    <Compile Remove="Themes\**" />
+    <Content Remove="Themes\**" />
+    <EmbeddedResource Remove="Themes\**" />
+    <None Remove="Themes\**" />
   </ItemGroup>
 
   <ItemGroup>
